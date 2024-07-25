@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haber</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        *
+{
+    padding: 0px;
+    margin: 0px;
+}
+.bg{
+    background-image: url(bg.jpg);
+    width: 100%;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header
+{
+    width: 100vw;
+    height: 70px;
+    background: #525252;
+    display: flex;
+    align-items: center;
+    
+}
+ul
+{
+    color: white;
+    list-style: none;
+    margin-left: 190px;
+}
+
+ul li{
+    float: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+    cursor: pointer;
+    margin-left: 20px;
+    text-transform: capitalize;
+}
+.logo
+{
+    width: 90px;
+    height: 70px;
+    margin-left: 10%;
+    background: #f16304;
+}
+.logo h5{
+    margin-top: 25px;
+    margin-left: 10px;
+    color: #ffffff;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+ul li a:hover{
+    color: #f16304;
+}
+p{
+    font-size: 12px;
+    margin-left: 17px;
+    margin-top: 5px;
+}
+.icons{
+    margin-left: 170px;
+    margin-top: 5px;
+}
+.icons i{
+    margin-left: 20px;
+}
+.icons i:hover{
+    background: #f16304;
+    border-radius: 50px;
+    padding: 20px;
+    transition: 1s ease;
+}
+.text-div{
+    display: flex;
+    width: 30%;
+    margin-left: 35%;
+    height: 20vh;
+    background: #f16304;
+    margin-top: -128px;
+}
+.mt{
+    text-align: center;
+    color: #ffffff;
+    margin-top: 50px;
+    display: flex;
+}
+.mt h4{
+    margin-left: 80px;
+    margin-right: 70px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h2{
+    margin-top: 5%;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.bx-1 .i{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    background: #525252;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+.bx-1 i{
+    margin-top: 25px;
+    font-size: 30px;
+}
+.bx{
+    display: flex;
+    margin-top: 5%;
+}
+.bx-1{
+    margin-left: 10%;
+    text-align: center;
+}
+.bx-1 h4{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.bx-1 .btn{
+    margin-top: 10%;
+    width: 60%;
+    height: 20%;
+    border: 1px solid #525252;
+    color: #525252;
+    background: none;
+}
+.bx-1 .btn:hover{
+    background: #525252;
+    color: #fff;
+    cursor: pointer;
+}
+.bx-2 .i{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    background: #f16304;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+.bx-2 i{
+    margin-top: 25px;
+    font-size: 30px;
+}
+.bx{
+    display: flex;
+    margin-top: 5%;
+}
+.bx-2{
+    margin-left: 10%;
+    text-align: center;
+}
+.bx-2 h4{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.btn{
+    margin-top: 10%;
+    width: 60%;
+    height: 20%;
+    border: 1px solid #f16304;
+    color: #f16304;
+    background: none;
+}
+.btn:hover{
+    background: #f16304;
+    color: #fff;
+    cursor: pointer;
+}
+
+.i{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    background: #f16304;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+}
+.bx-3 i{
+    margin-top: 25px;
+    font-size: 30px;
+}
+.bx{
+    display: flex;
+    margin-top: 5%;
+}
+.bx-3{
+    margin-left: 10%;
+    text-align: center;
+}
+.bx-3 h4{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.btn{
+    margin-top: 10%;
+    width: 60%;
+    height: 20%;
+    border: 1px solid #f16304;
+    color: #f16304;
+    background: none;
+}
+.btn:hover{
+    background: #f16304;
+    color: #fff;
+    cursor: pointer;
+}
+
+.i{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    background: #f16304;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+}
+.bx-4 i{
+    margin-top: 25px;
+    font-size: 30px;
+}
+.bx{
+    display: flex;
+    margin-top: 5%;
+}
+.bx-4{
+    margin-left: 10%;
+    text-align: center;
+}
+.bx-4 h4{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.btn{
+    margin-top: 10%;
+    width: 60%;
+    height: 20%;
+    border: 1px solid #f16304;
+    color: #f16304;
+    background: none;
+}
+.btn:hover{
+    background: #f16304;
+    color: #fff;
+    cursor: pointer;
+}
+.advice{
+    text-align: center;
+    width: 100%;
+    height: 90vh;
+    background: #c9c9c9;
+    margin-top: 5%;
+    padding-top: 10px;
+}
+.heading h2{
+    margin-top: 50px;
+}
+.p{
+    font-size: 18px;
+    margin-top: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.boxes{
+    display: flex;
+}
+.box{
+    margin-top: 3%;
+    margin-left: 10%;
+    width: 20%;
+    height: 57vh;
+    background: #ffffff;
+    text-align: center;
+}
+.box img{
+    margin-top: 5%;
+}
+.box h4{
+    color: #f16304;
+    font-size: larger;
+    margin-top: 5%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.box p{
+    margin-top: 5%;
+    color: #c9c9c9;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.box i{
+    border: 1px solid #f16304;
+    border-radius: 50px;
+    margin-top: 5%;
+    color: #f16304;
+}
+.footer{
+    width: 100%;
+    height: 70vh;
+    background-image: linear-gradient(rgba(2, 2, 2, 0.75),rgba(0,0,0,0.75)),url(footer_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+input{
+    margin-top: 3%;
+    width: 30%;
+    height: 50px;
+    background: transparent;
+    border: 1px solid #c9c9c9;
+    margin-left: 20%;
+    color: #ffffff;
+}
+.footer .btn{
+    width: 10%;
+    height: 7%;
+    border: 1px solid #f16304;
+    color: #f16304;
+    background: none;
+}
+.other{
+    width: 100%;
+    height: 30vh;
+    background: #666565;
+    display: flex;
+}
+.i i{
+    margin-top: 20px;
+    font-size: 30px;
+}
+.other .i{
+    margin-left: 10%;
+}
+.other h5{
+    margin-top: 70px;
+    margin-left: 5px;
+    color: #fff;
+
+}
+.other .i{
+    margin-top: 45px;
+}
+@media (max-width: 1080px){
+    header{
+        padding: 18px 60px;
+    }
+    .text-div{
+        padding: 0 100px;
+    }
+}
+@media (max-width: 991px){
+    header{
+        padding: 18px 4%;
+    }
+    section{
+        padding: 50px 4%;
+    }
+    .text-div h1{
+        font-size: 2rem;
+    }
+    .text-div h2{
+        font-size: 1rem;
+    }
+    .categories-container{
+        grid-template-columns: repeat(auto-fit,minmax(244px auto));
+       }
+}
+@media (max-width: 852px){
+    header{
+    padding: 10px 4%;
+    }
+   .home-text h1{
+    font-size: 1.7rem;
+   }
+   .container img{
+    width: 390px;
+   }
+   .btn{
+    padding: 0.6rem 1.2rem;
+   }
+   .products-container{
+    grid-template-columns: repeat(auto-fit,minmax(244px auto));
+   }
+   .client{
+    grid-template-columns: repeat(auto-fit,minmax(244px auto));
+   }
+}
+@media (max-width: 712){
+    .heading h1{
+        font-size: 1.2rem;
+    }
+    .boxes{
+        grid-template-columns: repeat(auto-fit,minmax(244 auto));
+    }
+    .btn{
+        max-width: 164px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <h5>
+            <i class="fa-solid fa-heart" style="color: #ffffff;"></i>
+            Haber
+            </h5>
+        </div>
+        <ul>
+            <li><a data-aos="fade-up" href="#">Home</a></li>
+            <li><a data-aos="fade-up" href="#">About</a></li>
+            <li><a data-aos="fade-up" href="#">Services</a></li>
+            <li><a data-aos="fade-up" href="#">Project</a></li>
+            <li><a data-aos="fade-up" href="#">Our Blog</a></li>
+            <li><a data-aos="fade-up" href="#">Contact us</a></li>
+        </ul>
+
+        <div class="icons">
+            <i class="fa-brands fa-youtube" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+            <i class="fa-solid fa-wifi" style="color: #ffffff;"></i>
+        </div>
+    </div>
+    <div class="bg">
+    </div>
+    <div class="text-div">
+    <div class="mt">
+        <div class="left-angle">
+       <i class="fa-solid fa-angle-left" style="color: #ffffff;"></i>
+        </div>
+       <h4>WE MEET YOUR FINANCIAL<br>INVESTMENTS NEED</h4>
+        <div class="right-angle">
+        <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i>
+    </div>
+    </div>
+    </div>
+
+    <div class="client">
+        <h2>OUR FOCUS IS OUR CLIENT'S SUCCESS</h2>
+        <div class="bx">
+            <div class="bx-1">
+                <div class="i">
+                    <i class="fa-solid fa-wallet" style="color: #ffffff;"></i>
+                </div>
+                <h4>PRIVATE <br> BANKING</h4>
+                <p>Lorem ipsum dolor sit <br> amet consectetur adipisicing elit. <br> Aperiam iste dolores expedita</p>
+            <button class="btn">Read More</button>
+            </div>
+        <div class="bx-2">
+            <div class="i">
+                <i class="fa-solid fa-bars-progress" style="color: #ffffff;"></i>
+            </div>
+            <h4>TIME SAVING <br> TIPS</h4>
+            <p>Lorem ipsum dolor sit <br> amet consectetur adipisicing elit. <br> Aperiam iste dolores expedita</p>
+        <button class="btn">Read More</button>
+        </div>
+    <div class="bx-3">
+        <div class="i">
+            <i class="fa-solid fa-sack-dollar" style="color: #ffffff;"></i>
+        </div>
+        <h4>BUDGETING <br> TIPS</h4>
+        <p>Lorem ipsum dolor sit <br> amet consectetur adipisicing elit. <br> Aperiam iste dolores expedita</p>
+    <button class="btn">Read More</button>
+    </div>
+<div class="bx-4">
+    <div class="i">
+        <i class="fa-solid fa-money-bills" style="color: #ffffff;"></i>
+        </div>
+    <h4>MONEY SAVING <br> IDEAS</h4>
+    <p>Lorem ipsum dolor sit <br> amet consectetur adipisicing elit. <br> Aperiam iste dolores expedita</p>
+<button class="btn">Read More</button>
+</div>
+    </div>
+</div>
+
+<div class="advice">
+    <div class="heading">
+    <h2>ADVICE ON HOW TO MAKE WISE INVESTMENT</h2>
+    </div>
+    <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni tenetur nobis perferendis perspiciatis labore, quibusdam nostrum accusamus magnam! <br> Voluptates reiciendis incidunt quaerat magni sunt accusamus optio quia at quae? Delectus.</p>
+    <div class="boxes">
+        <div class="box">
+            <img src="meeting.jpg" alt="" width="250px" height="200px">
+            <h4>Aut perfirendis</h4>
+            <p>Lorem ipsum dolor sit <br> amet consectetur adipisicing elit. <br> Aperiam iste dolores expedita</p>
+            <i class="fa-solid fa-arrow-right" style="color: #f16304;"></i>
+        </div>
+        <div class="box">
+            <img src="mobile.avif" alt="" width="250px" height="200px">
+            <h4>Laoretum</h4>
+            <p>Lorem ipsum dolor sit <br> amet consectetur adipisicing elit. <br> Aperiam iste dolores expedita</p>
+            <i class="fa-solid fa-arrow-right" style="color: #f16304;"></i>
+        </div>
+        <div class="box">
+            <img src="women.webp" alt="" width="250px" height="200px">
+            <h4>Foud maxim</h4>
+            <p>Lorem ipsum dolor sit <br> amet consectetur adipisicing elit. <br> Aperiam iste dolores expedita</p>
+            <i class="fa-solid fa-arrow-right" style="color: #f16304;"></i>
+        </div>
+    </div>
+</div>
+<img src="logoes.png" alt="" width="90%">
+<div class="footer">
+      <div class="input-1">
+    <input type="text" placeholder="NAME">
+    </div>
+  <div class="input-2">
+    <input type="email" placeholder="EMAIL">
+  </div>
+  <div class="input-3">
+    <input type="password" placeholder="PASSWORD">
+  </div>
+  <button class="btn">Send</button>
+</div>
+<div class="other">
+    <div class="i">
+    <i class="fa-solid fa-location-dot" style="color: #ffffff;"></i>
+</div>
+<h5>New york 9870 vincent <br> glassow</h5>
+<div class="i">
+    <i class="fa-solid fa-envelope" style="color: #ffffff;"></i>
+</div>
+<h5>CONTACT@DEMOLINK.ORG</h5>
+<div class="i">
+    <i class="fa-solid fa-phone" style="color: #ffffff;"></i>
+</div>
+<h5>+1 800 603 6035</h5>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
+</html>
